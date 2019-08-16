@@ -1,4 +1,4 @@
-<div class="row animated fadeIn fast">
+<!-- <div class="row animated fadeIn fast">
     <div class="col-md-4">
         <img [src]="'http://image.tmdb.org/t/p/w500'+pelicula.backdrop_path" class="img-fluid" [alt]="pelicula.original_title">
         <br><br>
@@ -13,6 +13,33 @@
         </p>
 
 
+    </div>
+
+</div> -->
+<div *ngIf="pelicula" class="container main-container animated fadeIn fast">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="pelicula | peliculaImagen: true" class="img-fluid" [alt]="pelicula.original_title">
+            <br><br>
+            <a [routerLink]="['/'+regresarA, busqueda]" class="btn btn-outline-danger btn-block">Regresar</a>
+
+        </div>
+        <div class="col-md-8">
+            <h3>{{pelicula.original_title}}</h3>
+            <hr>
+            <p class="text-justify">
+                {{pelicula.overview}}
+            </p>
+            <p>
+                {{pelicula.tagline}}
+            </p>
+            <p>
+                Popularidad: <span class="badge badge-primary">{{pelicula.popularity | number:".0-0"}}/10</span>
+                <br> Voto promedio: <span class="badge badge-primary">{{pelicula.vote_average}}</span>
+            </p>
+
+
+        </div>
     </div>
 
 </div>

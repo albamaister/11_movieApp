@@ -9,10 +9,17 @@ import { PeliculasService } from '../../services/peliculas.service';
   styles: []
 })
 export class PeliculaComponent {
-  pelicula: any = {};
-  constructor(private router: ActivatedRoute, private _sp: PeliculasService) {
-    this.router.params.subscribe( params => {
+  pelicula: any;
+  regresarA = '';
+  busqueda = '';
+  constructor(private route: ActivatedRoute, private _sp: PeliculasService) {
+    this.route.params.subscribe( params => {
+     // console.log(params);
       this.getPeli( params['id']);
+      this.regresarA = params['pag'];
+      if (params['busqueda']) {
+      this.busqueda = params['busqueda'];
+      }
     });
   }
 

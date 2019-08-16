@@ -12,10 +12,9 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'buscar', component: BuscarComponent },
-  { path: 'pelicula/:id', component: PeliculaComponent,
-    children: [
-      { path: 'home', component: PeliculaComponent}
-    ] },
+  { path: 'buscar/:texto', component: BuscarComponent },
+  { path: 'pelicula/:id/:pag', component: PeliculaComponent},
+  { path: 'pelicula/:id/:pag/:busqueda', component: PeliculaComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 // este modulo es el encargado de manejar mis rutas
