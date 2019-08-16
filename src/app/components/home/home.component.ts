@@ -8,8 +8,8 @@ import { PeliculasService } from '../../services/peliculas.service';
   styles: []
 })
 export class HomeComponent {
-  pelisPopulares: any[] = [];
-  popularesEntreNinos: any[] = [];
+  pelisPopulares: any;
+  popularesEntreNinos: any;
 
   cartelera: any;
 
@@ -25,8 +25,6 @@ export class HomeComponent {
 
     this.peliculas.getEstreno().subscribe((data3: any) => {
       // this.popularesEntreNinos = data3.results;
-      console.log("object");
-      console.log(data3);
       this.cartelera = data3.results;
     });
 

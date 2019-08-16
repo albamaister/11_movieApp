@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
+import { GaleriaComponent } from './components/home/galeria.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
     PeliculaComponent,
     BuscarComponent,
     TarjetasComponent,
-    PeliculaImagenPipe
+    PeliculaImagenPipe,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
