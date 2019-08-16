@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
     HomeComponent,
     PeliculaComponent,
     BuscarComponent,
-    TarjetasComponent
+    TarjetasComponent,
+    PeliculaImagenPipe
   ],
   imports: [
     BrowserModule,

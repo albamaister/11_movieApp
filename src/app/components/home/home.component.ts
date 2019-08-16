@@ -11,6 +11,8 @@ export class HomeComponent {
   pelisPopulares: any[] = [];
   popularesEntreNinos: any[] = [];
 
+  cartelera: any;
+
   constructor( private peliculas: PeliculasService) {
     this.peliculas.getPopulars().subscribe((data: any) => {
       this.pelisPopulares = data.results;
@@ -23,7 +25,9 @@ export class HomeComponent {
 
     this.peliculas.getEstreno().subscribe((data3: any) => {
       // this.popularesEntreNinos = data3.results;
+      console.log("object");
       console.log(data3);
+      this.cartelera = data3.results;
     });
 
   }
