@@ -1,0 +1,18 @@
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="'http://image.tmdb.org/t/p/w500'+pelicula.backdrop_path" class="img-fluid" [alt]="pelicula.original_title">
+        <br><br>
+        <a [routerLink]="['/home']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+    <div class="col-md-8">
+        <h3>{{pelicula.original_title}}</h3>
+        <hr>
+        <p>
+            {{pelicula.overview}}
+        </p>
+
+
+    </div>
+
+</div>

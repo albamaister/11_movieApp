@@ -1,0 +1,19 @@
+<div class="row m-5">
+    <div class="col">
+        <input #termino type="text" (keyup)="search(termino.value)" class="form-control" placeholder="Search Artist">
+    </div>
+</div>
+<div class="card-columns">
+    <div class="card puntero" *ngFor="let item of busquedas">
+        <img [src]="'http://image.tmdb.org/t/p/w500'+item.backdrop_path" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.original_title}}</h5>
+            <p class="card-text">{{item.overview}}</p>
+        </div>
+        <div class="card-body">
+            <button (click)="verPeli(item)" class="btn btn-outline-primary btn-block" type="button">
+                Ver mas..
+            </button>
+        </div>
+    </div>
+</div>

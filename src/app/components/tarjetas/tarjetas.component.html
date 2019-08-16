@@ -1,0 +1,9 @@
+<div class="card-columns">
+
+    <div class="card puntero" *ngFor="let item of pelis">
+        <img [src]="'http://image.tmdb.org/t/p/w500'+item.backdrop_path" class="card-img-top" alt=".">
+        <div class="card-body">
+            <h5 class="card-title">{{item.original_title}}</h5>
+        </div>
+    </div>
+</div>
